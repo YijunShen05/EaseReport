@@ -1,5 +1,6 @@
 ---
 name: ease-report
+license: MIT
 description: "Design and iteratively improve cross-domain HTML reports with clear information hierarchy, composable filtering, comparable statistics and traceable evidence. Use to build or refine analytical reports and data-review dashboards; includes an optional editorial visual system and offline examples, without fixing the domain, theme or framework."
 ---
 
@@ -7,7 +8,7 @@ description: "Design and iteratively improve cross-domain HTML reports with clea
 
 把领域数据变成可核对、可探索、可解释的交互式 HTML 报告。提供设计方法，而不是固定 HTML、
 列名、评分公式、模型名单或唯一视觉模板。遵守当前项目的来源、权限、交付格式和用户选择。
-EaseReport 延续原有交互式比较方法；可选视觉方案与参考骨架服务于它，不替代它。
+可选视觉方案与参考骨架服务于通用报告设计方法，不替代它。
 
 ## 从什么开始
 
