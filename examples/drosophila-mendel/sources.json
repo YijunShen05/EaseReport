@@ -1,0 +1,36 @@
+{
+  "retrieved_date": "2026-10-15",
+  "purpose": "事实来源；不是合成计数的来源，也不是实验已执行证明。",
+  "sources": [
+    {
+      "id": "flybase-vg",
+      "title": "FlyBase · Dmel vg",
+      "url": "https://flybase.org/reports/FBgn0003975.html",
+      "supports": "vg 位于 2R；本例只用其基因定位事实，不把全部等位型视为隐性。"
+    },
+    {
+      "id": "flybase-e",
+      "title": "FlyBase · Dmel e",
+      "url": "https://flybase.org/reports/FBgn0000527.html",
+      "supports": "e 位于 3R；与本例 vg 位于不同常染色体。"
+    },
+    {
+      "id": "inheritance",
+      "title": "OpenStax Biology 2e · Laws of Inheritance",
+      "url": "https://openstax.org/books/biology-2e/pages/12-3-laws-of-inheritance",
+      "supports": "独立分配及完全显性教学模型下的单因子与双因子比例；不把连锁视作独立分配。"
+    },
+    {
+      "id": "lab-education",
+      "title": "ABLE · Chinnici & Ketcham 的果蝇遗传教学实验",
+      "url": "https://www.ableweb.org/biologylabs/wp-content/uploads/volumes/vol-29/004.pdf",
+      "supports": "果蝇 P/F1/F2 的教学记录节奏，残翅与黑檀体色的常染色体隐性教学类型。未采用该文特定 miniature 品系背景。"
+    },
+    {
+      "id": "stats",
+      "title": "NIST · Chi-Square Goodness of Fit Test",
+      "url": "https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/chsqgood.htm",
+      "supports": "Pearson χ² 计数拟合优度与期望频数至少 5 的近似条件。"
+    }
+  ]
+}

@@ -22,7 +22,15 @@ EaseReport 是一套跨领域的报告设计方法与 agent skill，覆盖数据
 
 [示例 HTML](demos/supplier-delivery.html) · [合成数据与配置](examples/supplier-delivery.json)
 
-GitHub 文件页不会直接运行 HTML。下载 HTML（Download raw file）后用浏览器打开即可，数据与样式均已内嵌。两份示例都是合成演示，不代表真实业务成绩。
+GitHub 文件页不会直接运行 HTML。下载 HTML（Download raw file）后用浏览器打开即可，数据与样式均已内嵌。全部示例都是合成演示，不代表真实业务或实验成绩。
+
+### 果蝇遗传日志：从培养瓶到理论比例
+
+![果蝇遗传规律合成日志：设计、计数与过程可核对](docs/preview-mendel.png)
+
+[实验日志 HTML](demos/drosophila-mendel.html) · [例子说明与构建方法](examples/drosophila-mendel/README.md) · [合成记录](examples/drosophila-mendel/data.json)
+
+单因子 F2、双因子 F2 与测交三组设计；点击组别、培养瓶和表型进入明细，展开配子组合与逐日日志。理论对照保留完整分母，质控排除、缺测与小样本单独呈现。**模拟数据不能用于独立验证遗传定律。**
 
 ## 方法包含什么
 
@@ -103,7 +111,7 @@ python scripts/build_editorial_example.py \
 python -m unittest discover -s tests -v
 ```
 
-构建器有 14 个测试，覆盖契约、两份领域配置、零/缺失保留、版本拒绝、数据安全序列化和可选模块。浏览器验收检查两级图表联动、配对有效分母、高/低指标方向、分页、证据、导出及窄屏。详见 [验收记录](docs/verification.json)。
+通用构建器有 14 个测试，覆盖契约、两份领域配置、零/缺失保留、版本拒绝、数据安全序列化和可选模块；遗传日志另有 13 个领域测试，合计 27 个。浏览器验收检查两级图表联动、配对有效分母、高/低指标方向、分页、证据、导出及窄屏。详见 [通用示例验收](docs/verification.json)与[遗传日志验收](docs/mendel-verification.json)。
 
 可选浏览器走查需要本机已有 Node.js、Playwright 与 Chrome；它们不是生成或打开报告的运行时依赖：
 
@@ -121,7 +129,7 @@ SKILL.md        方法入口与按需路由
 references/     数据/比较、交互/呈现、视觉方案、迭代与适配契约
 assets/         可选 CSS 原语与小型 HTML 交互骨架
 scripts/        标准库单文件示例构建器
-examples/       两份跨领域合成配置
+examples/       跨领域合成配置与独立实验日志适配器
 demos/          可下载离线示例
 tests/          构建与浏览器回归
 docs/           实际截图及本次验收记录

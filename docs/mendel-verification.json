@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-15T16:02:31.649627+00:00",
+  "method": "EaseReport only; public domain-specific factual references used separately",
+  "core_skill_files_unchanged": {
+    "SKILL.md": true,
+    "assets/editorial-analytical.css": true,
+    "references/data-and-comparison.md": true,
+    "references/editorial-analytical-style.md": true,
+    "references/editorial-example-contract.md": true,
+    "references/evolution-and-validation.md": true,
+    "references/interaction-and-presentation.md": true
+  },
+  "core_skill_input_hashes": {
+    "SKILL.md": "484e0cc5e15bf69267bac2343b23e7eb00e4d5662055f60ffab456ecd2fc3f5f",
+    "assets/editorial-analytical.css": "32e382a7a71d1d0d0678985f0312d82f7331a84fda3c61d4282f45a2b4479f7f",
+    "references/data-and-comparison.md": "db4fd164617365be91acb2b644b9fdb4390e3ee24e3171759355a720f676d7c3",
+    "references/editorial-analytical-style.md": "bd5e36bee05002a0bd6f88594571af1e73877a59fa94f19e6ee2b2e50bc43060",
+    "references/editorial-example-contract.md": "d6f3f3b467b5981edb4ffc27d0a30e31d4945b8c67e309924cfe1a22b8c09261",
+    "references/evolution-and-validation.md": "082cb906503d65b85e0de1fb27d858f6cd3c1bb94f44fd0aac10115b411f66cd",
+    "references/interaction-and-presentation.md": "60367a25292ccdec933fa28f83087e0144d1834bf10e67bb8bf7f9c9eb47ced1"
+  },
+  "data_origin": "synthetic, seed=20261015; no p-value selection/rejection sampling",
+  "counts": {
+    "mono_F2": 300,
+    "dihybrid_F2": 496,
+    "testcross": 264,
+    "combined_classified": 1060,
+    "dihybrid_QC_excluded_classified": 48,
+    "dihybrid_pending_vials": 1
+  },
+  "tests": {
+    "generic_builder": 14,
+    "new_domain": 13,
+    "total": 27,
+    "p_value_checks": "analytic chi-square df1/df3 upper tails checked at known 0.05 quantiles"
+  },
+  "browser": {
+    "status": "passed",
+    "checks": [
+      "full theoretical combination grid",
+      "correct scored denominator",
+      "QC and missing kept outside statistics",
+      "phenotype highlights do not change test denominator or p",
+      "pagination invariance",
+      "scoped CSV with missing preserved",
+      "view export analysis vs display",
+      "expand original vial record",
+      "small expected count hides p",
+      "logs independent of statistics",
+      "experiment chart navigation",
+      "empty states",
+      "responsive overflow"
+    ],
+    "widths": [
+      {
+        "width": 1440,
+        "scroll": 1440
+      },
+      {
+        "width": 768,
+        "scroll": 768
+      },
+      {
+        "width": 390,
+        "scroll": 390
+      },
+      {
+        "width": 320,
+        "scroll": 320
+      }
+    ],
+    "errors": [],
+    "automaticNetworkRequests": []
+  },
+  "visual_inspection": [
+    "desktop overview and design",
+    "selected phenotype observation/expectation chart and test scope",
+    "expanded synthetic journal",
+    "fresh mobile initial overview"
+  ],
+  "source_record_sha256": {
+    "examples/drosophila-mendel/README.md": "87faa59f1f25dd7befa05dafe6929c7ffabf4b988c95c44e8526a8afd17b204e",
+    "examples/drosophila-mendel/build_report.py": "4a6b4b16deaf99c1df9bff7a917a39c08331422750d405f7827b49f3f734ed8f",
+    "examples/drosophila-mendel/data.json": "b76f57debcd1495b2d5f7596c70a3628d9586006def9afdd94e49ea8f0bd772e",
+    "examples/drosophila-mendel/model.py": "fa6912784c1a4ca73601869ce9b699808ad0ad118f1c6de882afe2c9b80b5c1a",
+    "examples/drosophila-mendel/report-template.html": "34eed4565a76d30df61d70894bac542697fe6f5c5226d865b117ab4ab93e51d0",
+    "examples/drosophila-mendel/sources.json": "0dc82fa5bda3aa18fe52004cd6ef38f30b2e27af53cbdc08442f788a4bfe6e91"
+  },
+  "report_sha256": "f803fcf2ae8b1fd06836adf6f958f0bc2926646a431c9701a185c8f029467101",
+  "conclusion_limit": "Synthetic data generated from a theory cannot independently validate it; non-rejection is not proof."
+}

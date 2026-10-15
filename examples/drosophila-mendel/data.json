@@ -1,0 +1,1175 @@
+{
+  "schemaVersion": 1,
+  "title": "孟德尔遗传规律 · 果蝇实验日志",
+  "synthetic": true,
+  "seed": 20261015,
+  "simulation_policy": "按理论概率逐只抽样，固定 seed；不按 p 值重抽或调参。QC、难判读数和小样本瓶是预设教学情景。",
+  "organism": "Drosophila melanogaster",
+  "timeline": "虚拟 D0–D35；不是现实日期或已执行实验",
+  "conditions": "合成培养设定 25°C，采用约两周一代的教学记录节奏",
+  "alleles": "教学简写：A/a = vg⁺/vg（翅型）；B/b = e⁺/e（体色）。选用教学常染色体隐性模型；不泛化到这些基因的所有等位型。",
+  "experiments": [
+    {
+      "id": "mono",
+      "label": "单因子 F2",
+      "kind": "mono",
+      "question": "一对等位基因如何分离？",
+      "ratio": "3 : 1",
+      "parental": "AA × aa",
+      "f1": "Aa，预期正常翅",
+      "cross": "Aa ♀ × Aa ♂",
+      "hypothesis": "F2 正常翅 : 残翅 = 3 : 1",
+      "gametes_a": [
+        "A",
+        "a"
+      ],
+      "gametes_b": [
+        "A",
+        "a"
+      ],
+      "classes": [
+        {
+          "id": "normal",
+          "label": "正常翅",
+          "genotype": "A_"
+        },
+        {
+          "id": "vestigial",
+          "label": "残翅",
+          "genotype": "aa"
+        }
+      ],
+      "f1_scored": 120,
+      "f1_wild": 120
+    },
+    {
+      "id": "dihybrid",
+      "label": "双因子 F2",
+      "kind": "di",
+      "question": "两对非连锁基因如何组合？",
+      "ratio": "9 : 3 : 3 : 1",
+      "parental": "AABB × aabb",
+      "f1": "AaBb，预期正常翅与常规体色",
+      "cross": "AaBb ♀ × AaBb ♂",
+      "hypothesis": "四种表型按 9 : 3 : 3 : 1 分离",
+      "gametes_a": [
+        "AB",
+        "Ab",
+        "aB",
+        "ab"
+      ],
+      "gametes_b": [
+        "AB",
+        "Ab",
+        "aB",
+        "ab"
+      ],
+      "classes": [
+        {
+          "id": "wild",
+          "label": "正常翅 · 常规体色",
+          "genotype": "A_B_"
+        },
+        {
+          "id": "ebony",
+          "label": "正常翅 · 黑檀体色",
+          "genotype": "A_bb"
+        },
+        {
+          "id": "vestigial",
+          "label": "残翅 · 常规体色",
+          "genotype": "aaB_"
+        },
+        {
+          "id": "double",
+          "label": "残翅 · 黑檀体色",
+          "genotype": "aabb"
+        }
+      ],
+      "f1_scored": 144,
+      "f1_wild": 144
+    },
+    {
+      "id": "testcross",
+      "label": "双因子测交",
+      "kind": "di",
+      "question": "用隐性亲本读出 F1 配子类型",
+      "ratio": "1 : 1 : 1 : 1",
+      "parental": "沿用双因子亲本家系",
+      "f1": "选取 AaBb 雌性进行测交",
+      "cross": "AaBb ♀ × aabb ♂",
+      "hypothesis": "四类后代等频；并非所有测交都如此",
+      "gametes_a": [
+        "AB",
+        "Ab",
+        "aB",
+        "ab"
+      ],
+      "gametes_b": [
+        "ab"
+      ],
+      "classes": [
+        {
+          "id": "wild",
+          "label": "正常翅 · 常规体色",
+          "genotype": "A_B_"
+        },
+        {
+          "id": "ebony",
+          "label": "正常翅 · 黑檀体色",
+          "genotype": "A_bb"
+        },
+        {
+          "id": "vestigial",
+          "label": "残翅 · 常规体色",
+          "genotype": "aaB_"
+        },
+        {
+          "id": "double",
+          "label": "残翅 · 黑檀体色",
+          "genotype": "aabb"
+        }
+      ],
+      "f1_scored": null,
+      "f1_wild": null
+    }
+  ],
+  "vials": [
+    {
+      "id": "M-01",
+      "experiment": "mono",
+      "status": "accepted",
+      "counts": [
+        68,
+        28
+      ],
+      "unclassified": 2,
+      "scored_day": 28,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "M-02",
+      "experiment": "mono",
+      "status": "accepted",
+      "counts": [
+        76,
+        28
+      ],
+      "unclassified": 1,
+      "scored_day": 29,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "M-03",
+      "experiment": "mono",
+      "status": "accepted",
+      "counts": [
+        76,
+        24
+      ],
+      "unclassified": 0,
+      "scored_day": 30,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-01",
+      "experiment": "dihybrid",
+      "status": "accepted",
+      "counts": [
+        72,
+        20,
+        30,
+        6
+      ],
+      "unclassified": 2,
+      "scored_day": 28,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-02",
+      "experiment": "dihybrid",
+      "status": "accepted",
+      "counts": [
+        70,
+        18,
+        21,
+        3
+      ],
+      "unclassified": 4,
+      "scored_day": 29,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-03",
+      "experiment": "dihybrid",
+      "status": "accepted",
+      "counts": [
+        70,
+        23,
+        17,
+        10
+      ],
+      "unclassified": 1,
+      "scored_day": 30,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-04",
+      "experiment": "dihybrid",
+      "status": "accepted",
+      "counts": [
+        80,
+        24,
+        21,
+        11
+      ],
+      "unclassified": 3,
+      "scored_day": 31,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "T-01",
+      "experiment": "testcross",
+      "status": "accepted",
+      "counts": [
+        17,
+        18,
+        21,
+        24
+      ],
+      "unclassified": 1,
+      "scored_day": 28,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "T-02",
+      "experiment": "testcross",
+      "status": "accepted",
+      "counts": [
+        23,
+        19,
+        24,
+        18
+      ],
+      "unclassified": 2,
+      "scored_day": 29,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "T-03",
+      "experiment": "testcross",
+      "status": "accepted",
+      "counts": [
+        26,
+        23,
+        21,
+        18
+      ],
+      "unclassified": 0,
+      "scored_day": 30,
+      "note": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "T-04",
+      "experiment": "testcross",
+      "status": "accepted",
+      "counts": [
+        3,
+        3,
+        5,
+        1
+      ],
+      "unclassified": 1,
+      "scored_day": 31,
+      "note": "小样本瓶仍保留；单独查看时每类期望数仅 3，不适用 χ² 近似。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-05",
+      "experiment": "dihybrid",
+      "status": "excluded",
+      "counts": [
+        32,
+        8,
+        4,
+        4
+      ],
+      "unclassified": 2,
+      "scored_day": 31,
+      "note": "合成质控事件：亲本基因型瓶签缺失；按事先规则排除，不因 p 值筛除。",
+      "record_origin": "synthetic"
+    },
+    {
+      "id": "D-06",
+      "experiment": "dihybrid",
+      "status": "pending",
+      "counts": null,
+      "unclassified": null,
+      "scored_day": null,
+      "note": "计数未登记。缺测不是 0，保留在登记目录。",
+      "record_origin": "synthetic"
+    }
+  ],
+  "logs": [
+    {
+      "id": "L-00",
+      "day": 0,
+      "title": "亲本登记",
+      "stage": "建系",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "核对亲本表型、品系标签与未交配雌性记录；建立瓶号。",
+      "observation": "亲本组合写入记录，遗传假设在计数前固定。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-03",
+      "day": 3,
+      "title": "移出亲本",
+      "stage": "世代控制",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "记录亲本转移，避免后续世代混杂。",
+      "observation": "本例只模拟操作日志，不代表实际饲养。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-07",
+      "day": 7,
+      "title": "幼虫观察",
+      "stage": "发育观察",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "记录幼虫活动及培养状态，暂不据此判断成虫性状。",
+      "observation": "发育迹象不作为表型分离计数。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "F1-dihybrid",
+      "day": 14,
+      "title": "双因子 F2 · F1 记录",
+      "stage": "F1",
+      "experiment": "dihybrid",
+      "vial": null,
+      "status": "recorded",
+      "action": "AaBb ♀ × AaBb ♂",
+      "observation": "模拟 F1 共 144 只，预期显性表型 144 只；此演示中不是新增的 F2 证据。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "F1-mono",
+      "day": 14,
+      "title": "单因子 F2 · F1 记录",
+      "stage": "F1",
+      "experiment": "mono",
+      "vial": null,
+      "status": "recorded",
+      "action": "Aa ♀ × Aa ♂",
+      "observation": "模拟 F1 共 120 只，预期显性表型 120 只；此演示中不是新增的 F2 证据。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "F1-testcross",
+      "day": 14,
+      "title": "双因子测交 · F1 记录",
+      "stage": "F1",
+      "experiment": "testcross",
+      "vial": null,
+      "status": "recorded",
+      "action": "AaBb ♀ × aabb ♂",
+      "observation": "测交使用双因子家系的 F1 雌性；不重复登记该家系的 F1 样本量。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-14",
+      "day": 14,
+      "title": "F1 表型记录",
+      "stage": "F1",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "登记 F1 表型并为 F2 / 测交分配后续培养瓶。",
+      "observation": "F1 表型记录不重复加入 F2 / 测交的统计分母。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-17",
+      "day": 17,
+      "title": "移出 F1 亲本",
+      "stage": "世代控制",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "核对新瓶标签，记录亲本移出。",
+      "observation": "不同世代及测交群体分别统计。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-21",
+      "day": 21,
+      "title": "蛹期记录",
+      "stage": "发育观察",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "记录蛹期进展和异常，尚无成虫计数的瓶保持待计数。",
+      "observation": "没有观测记录不补零。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-01",
+      "day": 28,
+      "title": "D-01 · 计数记录",
+      "stage": "计数",
+      "experiment": "dihybrid",
+      "vial": "D-01",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-M-01",
+      "day": 28,
+      "title": "M-01 · 计数记录",
+      "stage": "计数",
+      "experiment": "mono",
+      "vial": "M-01",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-T-01",
+      "day": 28,
+      "title": "T-01 · 计数记录",
+      "stage": "计数",
+      "experiment": "testcross",
+      "vial": "T-01",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-28",
+      "day": 28,
+      "title": "首轮成虫计数",
+      "stage": "计数",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "按已确定的表型类别计数；难以判读个体单列。",
+      "observation": "每只后代只登记一次；分次计数不重复相加。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-02",
+      "day": 29,
+      "title": "D-02 · 计数记录",
+      "stage": "计数",
+      "experiment": "dihybrid",
+      "vial": "D-02",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-M-02",
+      "day": 29,
+      "title": "M-02 · 计数记录",
+      "stage": "计数",
+      "experiment": "mono",
+      "vial": "M-02",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-T-02",
+      "day": 29,
+      "title": "T-02 · 计数记录",
+      "stage": "计数",
+      "experiment": "testcross",
+      "vial": "T-02",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-03",
+      "day": 30,
+      "title": "D-03 · 计数记录",
+      "stage": "计数",
+      "experiment": "dihybrid",
+      "vial": "D-03",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-M-03",
+      "day": 30,
+      "title": "M-03 · 计数记录",
+      "stage": "计数",
+      "experiment": "mono",
+      "vial": "M-03",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-T-03",
+      "day": 30,
+      "title": "T-03 · 计数记录",
+      "stage": "计数",
+      "experiment": "testcross",
+      "vial": "T-03",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-04",
+      "day": 31,
+      "title": "D-04 · 计数记录",
+      "stage": "计数",
+      "experiment": "dihybrid",
+      "vial": "D-04",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "按预设 QC 规则纳入；难以判读个体单列，不分配表型。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-05",
+      "day": 31,
+      "title": "D-05 · 质控排除",
+      "stage": "QC",
+      "experiment": "dihybrid",
+      "vial": "D-05",
+      "status": "excluded",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "合成质控事件：亲本基因型瓶签缺失；按事先规则排除，不因 p 值筛除。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-T-04",
+      "day": 31,
+      "title": "T-04 · 计数记录",
+      "stage": "计数",
+      "experiment": "testcross",
+      "vial": "T-04",
+      "status": "accepted",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "小样本瓶仍保留；单独查看时每类期望数仅 3，不适用 χ² 近似。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "COUNT-D-06",
+      "day": 35,
+      "title": "D-06 · 计数待登记",
+      "stage": "QC",
+      "experiment": "dihybrid",
+      "vial": "D-06",
+      "status": "pending",
+      "action": "保留原始计数、难判读数与 QC 状态。",
+      "observation": "计数未登记。缺测不是 0，保留在登记目录。",
+      "origin": "synthetic"
+    },
+    {
+      "id": "L-35",
+      "day": 35,
+      "title": "汇总与复核",
+      "stage": "汇总",
+      "experiment": "all",
+      "vial": null,
+      "status": "recorded",
+      "action": "保留全部瓶号、排除理由与缺测；对合格可判读计数作理论对照。",
+      "observation": "模拟符合理论不能作为真实验证；瓶间差异及存活选择需在真实实验中另查。",
+      "origin": "synthetic"
+    }
+  ],
+  "analysis_policy": {
+    "alpha": 0.05,
+    "expected_minimum": 5,
+    "inclusion": "status=accepted 且 counts 已登记；仅可判读后代进入表型分母。",
+    "selection": "实验/培养瓶决定检验范围；表型高亮和日志搜索只改变明细，不改变检验分母。",
+    "assumptions": "理论指定概率；将后代视作独立抽样以演示 χ² 近似，真实数据需另外考察瓶间异质性、存活差异和观察偏差。",
+    "not_proof": "合成数据来自待展示的理论，因此不能用于独立验证该理论；p≥0.05 也不证明定律成立。"
+  },
+  "analysis": {
+    "mono|all": {
+      "n": 300,
+      "expected": [
+        225.0,
+        75.0
+      ],
+      "chi2": 0.4444444444444444,
+      "df": 1,
+      "p": 0.5049850750938459,
+      "minimum_expected": 75.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.1111111111111111,
+        0.3333333333333333
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "mono",
+      "vial": "all",
+      "counts": [
+        220,
+        80
+      ],
+      "registered_vials": 3,
+      "accepted_vials": 3,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 3,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "mono|M-01": {
+      "n": 96,
+      "expected": [
+        72.0,
+        24.0
+      ],
+      "chi2": 0.8888888888888888,
+      "df": 1,
+      "p": 0.3457785861511604,
+      "minimum_expected": 24.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.2222222222222222,
+        0.6666666666666666
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "mono",
+      "vial": "M-01",
+      "counts": [
+        68,
+        28
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 2,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "mono|M-02": {
+      "n": 104,
+      "expected": [
+        78.0,
+        26.0
+      ],
+      "chi2": 0.20512820512820512,
+      "df": 1,
+      "p": 0.6506129639327538,
+      "minimum_expected": 26.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.05128205128205128,
+        0.15384615384615385
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "mono",
+      "vial": "M-02",
+      "counts": [
+        76,
+        28
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 1,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "mono|M-03": {
+      "n": 100,
+      "expected": [
+        75.0,
+        25.0
+      ],
+      "chi2": 0.05333333333333334,
+      "df": 1,
+      "p": 0.8173613313851769,
+      "minimum_expected": 25.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.013333333333333334,
+        0.04
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "mono",
+      "vial": "M-03",
+      "counts": [
+        76,
+        24
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 0,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "dihybrid|all": {
+      "n": 496,
+      "expected": [
+        279.0,
+        93.0,
+        93.0,
+        31.0
+      ],
+      "chi2": 1.4982078853046596,
+      "df": 3,
+      "p": 0.682684011211528,
+      "minimum_expected": 31.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.6057347670250897,
+        0.6881720430107527,
+        0.17204301075268819,
+        0.03225806451612903
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "dihybrid",
+      "vial": "all",
+      "counts": [
+        292,
+        85,
+        89,
+        30
+      ],
+      "registered_vials": 6,
+      "accepted_vials": 4,
+      "excluded_vials": 1,
+      "pending_vials": 1,
+      "unclassified": 10,
+      "excluded_classified": 48,
+      "excluded_unclassified": 2
+    },
+    "dihybrid|D-01": {
+      "n": 128,
+      "expected": [
+        72.0,
+        24.0,
+        24.0,
+        8.0
+      ],
+      "chi2": 2.6666666666666665,
+      "df": 3,
+      "p": 0.4459216983631228,
+      "minimum_expected": 8.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.0,
+        0.6666666666666666,
+        1.5,
+        0.5
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "dihybrid",
+      "vial": "D-01",
+      "counts": [
+        72,
+        20,
+        30,
+        6
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 2,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "dihybrid|D-02": {
+      "n": 112,
+      "expected": [
+        63.0,
+        21.0,
+        21.0,
+        7.0
+      ],
+      "chi2": 3.492063492063492,
+      "df": 3,
+      "p": 0.32179291901443474,
+      "minimum_expected": 7.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.7777777777777778,
+        0.42857142857142855,
+        0.0,
+        2.2857142857142856
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "dihybrid",
+      "vial": "D-02",
+      "counts": [
+        70,
+        18,
+        21,
+        3
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 4,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "dihybrid|D-03": {
+      "n": 120,
+      "expected": [
+        67.5,
+        22.5,
+        22.5,
+        7.5
+      ],
+      "chi2": 2.2814814814814817,
+      "df": 3,
+      "p": 0.516077843751737,
+      "minimum_expected": 7.5,
+      "approximation_valid": true,
+      "contributions": [
+        0.09259259259259259,
+        0.011111111111111112,
+        1.3444444444444446,
+        0.8333333333333334
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "dihybrid",
+      "vial": "D-03",
+      "counts": [
+        70,
+        23,
+        17,
+        10
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 1,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "dihybrid|D-04": {
+      "n": 136,
+      "expected": [
+        76.5,
+        25.5,
+        25.5,
+        8.5
+      ],
+      "chi2": 1.7777777777777777,
+      "df": 3,
+      "p": 0.6197826385877188,
+      "minimum_expected": 8.5,
+      "approximation_valid": true,
+      "contributions": [
+        0.16013071895424835,
+        0.08823529411764706,
+        0.7941176470588235,
+        0.7352941176470589
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "dihybrid",
+      "vial": "D-04",
+      "counts": [
+        80,
+        24,
+        21,
+        11
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 3,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "dihybrid|D-05": {
+      "n": 0,
+      "expected": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "chi2": null,
+      "df": 3,
+      "p": null,
+      "minimum_expected": null,
+      "approximation_valid": false,
+      "contributions": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "decision": "无合格可判读计数，不检验。",
+      "experiment": "dihybrid",
+      "vial": "D-05",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 0,
+      "excluded_vials": 1,
+      "pending_vials": 0,
+      "unclassified": 0,
+      "excluded_classified": 48,
+      "excluded_unclassified": 2
+    },
+    "dihybrid|D-06": {
+      "n": 0,
+      "expected": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "chi2": null,
+      "df": 3,
+      "p": null,
+      "minimum_expected": null,
+      "approximation_valid": false,
+      "contributions": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "decision": "无合格可判读计数，不检验。",
+      "experiment": "dihybrid",
+      "vial": "D-06",
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 0,
+      "excluded_vials": 0,
+      "pending_vials": 1,
+      "unclassified": 0,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "testcross|all": {
+      "n": 264,
+      "expected": [
+        66.0,
+        66.0,
+        66.0,
+        66.0
+      ],
+      "chi2": 1.0303030303030303,
+      "df": 3,
+      "p": 0.793920063415628,
+      "minimum_expected": 66.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.13636363636363635,
+        0.13636363636363635,
+        0.3787878787878788,
+        0.3787878787878788
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "testcross",
+      "vial": "all",
+      "counts": [
+        69,
+        63,
+        71,
+        61
+      ],
+      "registered_vials": 4,
+      "accepted_vials": 4,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 4,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "testcross|T-01": {
+      "n": 80,
+      "expected": [
+        20.0,
+        20.0,
+        20.0,
+        20.0
+      ],
+      "chi2": 1.5,
+      "df": 3,
+      "p": 0.6822703303362125,
+      "minimum_expected": 20.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.45,
+        0.2,
+        0.05,
+        0.8
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "testcross",
+      "vial": "T-01",
+      "counts": [
+        17,
+        18,
+        21,
+        24
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 1,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "testcross|T-02": {
+      "n": 84,
+      "expected": [
+        21.0,
+        21.0,
+        21.0,
+        21.0
+      ],
+      "chi2": 1.2380952380952381,
+      "df": 3,
+      "p": 0.7438827406786408,
+      "minimum_expected": 21.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.19047619047619047,
+        0.19047619047619047,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "testcross",
+      "vial": "T-02",
+      "counts": [
+        23,
+        19,
+        24,
+        18
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 2,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "testcross|T-03": {
+      "n": 88,
+      "expected": [
+        22.0,
+        22.0,
+        22.0,
+        22.0
+      ],
+      "chi2": 1.5454545454545454,
+      "df": 3,
+      "p": 0.6718198690510685,
+      "minimum_expected": 22.0,
+      "approximation_valid": true,
+      "contributions": [
+        0.7272727272727273,
+        0.045454545454545456,
+        0.045454545454545456,
+        0.7272727272727273
+      ],
+      "decision": "在预设 0.05 水平下未拒绝此理论比例；不等于证明。",
+      "experiment": "testcross",
+      "vial": "T-03",
+      "counts": [
+        26,
+        23,
+        21,
+        18
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 0,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    },
+    "testcross|T-04": {
+      "n": 12,
+      "expected": [
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "chi2": 2.6666666666666665,
+      "df": 3,
+      "p": null,
+      "minimum_expected": 3.0,
+      "approximation_valid": false,
+      "contributions": [
+        0.0,
+        0.0,
+        1.3333333333333333,
+        1.3333333333333333
+      ],
+      "decision": "期望频数不足 5，仅展示描述性偏差，不报告近似 p 值。",
+      "experiment": "testcross",
+      "vial": "T-04",
+      "counts": [
+        3,
+        3,
+        5,
+        1
+      ],
+      "registered_vials": 1,
+      "accepted_vials": 1,
+      "excluded_vials": 0,
+      "pending_vials": 0,
+      "unclassified": 1,
+      "excluded_classified": 0,
+      "excluded_unclassified": 0
+    }
+  }
+}
