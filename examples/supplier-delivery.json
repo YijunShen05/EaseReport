@@ -1,0 +1,160 @@
+{
+  "title": "交付更准时了吗？从订单看证据",
+  "summary": "延迟天数越低越好。先看地区与承运方案，再核对同批订单；失败、缺测和有效零分别保留。",
+  "eyebrow": "EaseReport / SUPPLIER DELIVERY",
+  "snapshot": "合成快照 · 示例 B",
+  "scope": "两种方案对应同一合成订单与规格；不是用各组不同分母的均值替代同项比较。",
+  "synthetic": true,
+  "idField": "order_no",
+  "facet": {
+    "field": "region",
+    "label": "交付地区"
+  },
+  "drilldown": {
+    "field": "carrier",
+    "label": "承运方案"
+  },
+  "pageSize": 3,
+  "columns": [
+    {
+      "field": "order_no",
+      "label": "订单"
+    },
+    {
+      "field": "region",
+      "label": "交付地区"
+    },
+    {
+      "field": "carrier",
+      "label": "承运方案"
+    },
+    {
+      "field": "delay_a",
+      "label": "方案 A 延迟 / 天",
+      "numeric": true
+    },
+    {
+      "field": "delay_b",
+      "label": "方案 B 延迟 / 天",
+      "numeric": true
+    },
+    {
+      "field": "state_a",
+      "label": "A 状态"
+    },
+    {
+      "field": "state_b",
+      "label": "B 状态"
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "field": "delay_a",
+      "label": "方案 A 延迟",
+      "statusField": "state_a",
+      "validStatus": "已验收"
+    },
+    "candidate": {
+      "field": "delay_b",
+      "label": "方案 B 延迟",
+      "statusField": "state_b",
+      "validStatus": "已验收"
+    },
+    "direction": "lower",
+    "unit": "天",
+    "deltaUnit": "天",
+    "precision": 2,
+    "pairingNote": "只对齐同批同规格订单的已验收延迟。0 表示准时；验收失败不虚构延迟天数，也不加入同项差值均值。"
+  },
+  "detailsField": "audit_note",
+  "sourcesField": "references",
+  "theme": {
+    "background": "#f6f5f1",
+    "surface": "#fffefa",
+    "text": "#34312c",
+    "muted": "#716b61",
+    "line": "#dedbd2",
+    "accent": "#7a5934",
+    "soft": "#f0ebe1"
+  },
+  "rows": [
+    {
+      "order_no": "P1",
+      "region": "东区",
+      "carrier": "甲方案",
+      "delay_a": 5,
+      "delay_b": 1,
+      "state_a": "已验收",
+      "state_b": "已验收",
+      "audit_note": "P1 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P2",
+      "region": "东区",
+      "carrier": "乙方案",
+      "delay_a": 1,
+      "delay_b": 0,
+      "state_a": "已验收",
+      "state_b": "已验收",
+      "audit_note": "P2 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P3",
+      "region": "北区",
+      "carrier": "甲方案",
+      "delay_a": null,
+      "delay_b": 0,
+      "state_a": "验收失败",
+      "state_b": "已验收",
+      "audit_note": "P3 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P4",
+      "region": "北区",
+      "carrier": "丙方案",
+      "delay_a": 0,
+      "delay_b": 2,
+      "state_a": "已验收",
+      "state_b": "已验收",
+      "audit_note": "P4 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P5",
+      "region": "南区",
+      "carrier": "乙方案",
+      "delay_a": 4,
+      "delay_b": null,
+      "state_a": "已验收",
+      "state_b": "待登记",
+      "audit_note": "P5 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P6",
+      "region": "东区",
+      "carrier": "甲方案",
+      "delay_a": 2,
+      "delay_b": 1,
+      "state_a": "已验收",
+      "state_b": "已验收",
+      "audit_note": "P6 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    },
+    {
+      "order_no": "P7",
+      "region": "南区",
+      "carrier": "丙方案",
+      "delay_a": 1,
+      "delay_b": 1,
+      "state_a": "已验收",
+      "state_b": "已验收",
+      "audit_note": "P7 为合成订单。验收状态与延迟值分别登记；没有延迟观测时不计算改善。",
+      "references": []
+    }
+  ],
+  "exampleSchemaVersion": 1
+}

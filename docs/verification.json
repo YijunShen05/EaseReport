@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "verified_at": "2026-10-15T15:35:59.241990+00:00",
+  "skill_name": "ease-report",
+  "display_name": "EaseReport",
+  "original_method_preservation": {
+    "data_and_comparison_unchanged": true,
+    "interaction_reference_original_body_preserved": true,
+    "evolution_reference_original_body_preserved": true
+  },
+  "skill_frontmatter": "passed",
+  "internal_markdown_links": "passed",
+  "python_builder_tests_passed": 14,
+  "browser": {
+    "status": "passed",
+    "checks": [
+      "higher metric, valid zero, paired denominator, parent/child linkage, pagination invariance, evidence, state export",
+      "lower metric, failure/missing semantics, same-state CSV export, no invented difference, empty filter",
+      "no-comparison mode, no-drilldown mode, empty input, text/script escaping, link protocol, CSV text vs negative numeric"
+    ],
+    "screens": [
+      {
+        "width": 1440,
+        "scroll": 1440
+      },
+      {
+        "width": 768,
+        "scroll": 768
+      },
+      {
+        "width": 390,
+        "scroll": 390
+      },
+      {
+        "width": 320,
+        "scroll": 320
+      }
+    ],
+    "errors": [],
+    "automaticNetworkRequests": []
+  },
+  "visual_inspection": [
+    "release overview desktop",
+    "supplier two-level selected chart and details desktop",
+    "supplier mobile overview"
+  ],
+  "demonstration_domains": [
+    "release-quality: higher-is-better percentage",
+    "supplier-delivery: lower-is-better days with zero/failure/missing"
+  ],
+  "reference_scaffold_limits": [
+    "fixed pair of objects",
+    "one optional paired metric",
+    "one or two categorical levels",
+    "view export without import/restore"
+  ],
+  "method_limits": "The general method is not restricted to the scaffold schema, object count, domains, color palette or stack.",
+  "iteration": "Real feedback, minimal changes, explicit invariants, version/compatibility handling and cross-domain regression; no automatic authorization or publication."
+}

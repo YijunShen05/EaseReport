@@ -1,0 +1,4 @@
+interface:
+  display_name: "EaseReport"
+  short_description: "跨领域设计并持续改进简洁直观、可筛选比较且证据可追溯的交互式 HTML 报告"
+  default_prompt: "使用 $ease-report 整理这些资料与数据，设计简洁直观、图表和明细联动、可核对口径与证据的 HTML 报告；保留已有系统并按实际反馈迭代。"

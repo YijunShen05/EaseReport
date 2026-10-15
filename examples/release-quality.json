@@ -1,0 +1,211 @@
+{
+  "title": "发布质量，一眼看到变化",
+  "summary": "先看相同条目的质量变化，再从业务域进入具体组件，展开查看有效性与来源。此页使用合成数据演示设计方法。",
+  "eyebrow": "EaseReport / RELEASE QUALITY",
+  "snapshot": "合成快照 · 示例 A",
+  "scope": "同一合成样本集、相同成功率定义；描述性比较，不声称真实生产效果。",
+  "synthetic": true,
+  "idField": "case_key",
+  "facet": {
+    "field": "area",
+    "label": "业务域"
+  },
+  "drilldown": {
+    "field": "component",
+    "label": "组件"
+  },
+  "pageSize": 3,
+  "columns": [
+    {
+      "field": "case_key",
+      "label": "条目"
+    },
+    {
+      "field": "area",
+      "label": "业务域"
+    },
+    {
+      "field": "component",
+      "label": "组件"
+    },
+    {
+      "field": "previous_success",
+      "label": "发布前 / %",
+      "numeric": true
+    },
+    {
+      "field": "current_success",
+      "label": "发布后 / %",
+      "numeric": true
+    },
+    {
+      "field": "previous_status",
+      "label": "前状态"
+    },
+    {
+      "field": "current_status",
+      "label": "后状态"
+    }
+  ],
+  "comparison": {
+    "baseline": {
+      "field": "previous_success",
+      "label": "发布前成功率",
+      "statusField": "previous_status",
+      "validStatus": "有效"
+    },
+    "candidate": {
+      "field": "current_success",
+      "label": "发布后成功率",
+      "statusField": "current_status",
+      "validStatus": "有效"
+    },
+    "direction": "higher",
+    "unit": "%",
+    "deltaUnit": "个百分点",
+    "precision": 2,
+    "pairingNote": "逐项对齐相同条目与指标定义，只在双方状态有效且数值存在时计算差值。有效零参与；没有观测的条目不补零。"
+  },
+  "detailsField": "explanation",
+  "sourcesField": "sources",
+  "theme": {
+    "background": "#f6f4f0",
+    "surface": "#fffdfa",
+    "text": "#25343d",
+    "muted": "#626d76",
+    "line": "#d6dce1",
+    "accent": "#355f85",
+    "soft": "#eaf0f5"
+  },
+  "rows": [
+    {
+      "case_key": "R01",
+      "area": "平台",
+      "component": "身份服务",
+      "previous_success": 90,
+      "current_success": 96,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R01 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R02",
+      "area": "交易",
+      "component": "支付组件",
+      "previous_success": 84,
+      "current_success": 88,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R02 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R03",
+      "area": "交易",
+      "component": "结算组件",
+      "previous_success": 92,
+      "current_success": 90,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R03 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R04",
+      "area": "平台",
+      "component": "检索服务",
+      "previous_success": 0,
+      "current_success": 80,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R04 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R05",
+      "area": "平台",
+      "component": "检索服务",
+      "previous_success": null,
+      "current_success": 95,
+      "previous_status": "未观测",
+      "current_status": "有效",
+      "explanation": "R05 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R06",
+      "area": "消息",
+      "component": "通知组件",
+      "previous_success": 97,
+      "current_success": 99,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R06 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R07",
+      "area": "平台",
+      "component": "身份服务",
+      "previous_success": 80,
+      "current_success": null,
+      "previous_status": "有效",
+      "current_status": "未观测",
+      "explanation": "R07 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    },
+    {
+      "case_key": "R08",
+      "area": "交易",
+      "component": "支付组件",
+      "previous_success": 88,
+      "current_success": 88,
+      "previous_status": "有效",
+      "current_status": "有效",
+      "explanation": "R08 为合成条目。0 是有效成功率；未观测与零不同。",
+      "sources": [
+        {
+          "label": "HTML 交付规范参考",
+          "url": "https://html.spec.whatwg.org/"
+        }
+      ]
+    }
+  ],
+  "exampleSchemaVersion": 1
+}
